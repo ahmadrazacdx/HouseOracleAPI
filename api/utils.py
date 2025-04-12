@@ -9,6 +9,8 @@ This module contains helper functions for:
 import joblib
 import numpy as np
 import pandas as pd
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def create_df(input_dict: dict) -> pd.DataFrame:
     """
@@ -68,7 +70,8 @@ def feature_engineering(X):
         3. Calculate area-per-room ratio
     """
     X = X.copy()
-    location_tiers = joblib.load('../artifacts/models/location_tiers.pkl')
+    location_tiers_path = os.path.join(BASE_DIR, 'artifacts', 'models', 'location_tiers.pkl')
+    location_tiers = joblib.load(location_tiers_path)
     X['area'] = X.area.apply(np.log1p)
     X["location_tier"] = X["location"].map(location_tiers).fillna(4)
     X['area_room_ratio'] = X['area'] / (X['bedrooms'] + X['baths'])
