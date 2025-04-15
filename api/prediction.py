@@ -15,6 +15,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 from sklearn.compose import TransformedTargetRegressor
 from xgboost import XGBRegressor
+import sys
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,6 +27,8 @@ from api.utils import (
     log_transform,
     exp_transform
 )
+sys.modules['__main__'].log_transform = log_transform
+sys.modules['__main__'].exp_transform = exp_transform
 
 def get_price_prediction(input_dict:dict, purpose:str) -> float:
     """
