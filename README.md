@@ -2,7 +2,7 @@
 
 ## 🚀 Overview
 Machine learning-powered system for property price prediction and recommendations in Pakistan's Real Estate and Housing Data.<br>
-**Dataset:** [Link](https://www.kaggle.com/datasets/ebrahimhaquebhatti/pakistan-house-price-prediction)
+**Dataset:** [Link](https://www.kaggle.com/datasets/jillanisofttech/pakistan-house-price-dataset)
 
 ## ✨ Features
 - Price prediction for Rent/Sale Properties
