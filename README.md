@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ---
 # 📖 Prediction API Docs
 ## Endpoints
-### Home/Welcome
+### Home
 ```http
 <api url>/
 ```
