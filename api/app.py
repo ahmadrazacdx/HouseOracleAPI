@@ -12,6 +12,7 @@ import os
 
 app = Flask(__name__)
 CORS(app)
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 @app.route('/')
 def home():
