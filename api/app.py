@@ -15,7 +15,7 @@ CORS(app)
 
 @app.route('/')
 def home():
-    return 'Welcome to the HouseOracle API'
+    return jsonify({'STATUS': 200, 'Message':'House-Oracle API working fine!'})
 
 
 @app.route('/predict', methods=['POST'])
